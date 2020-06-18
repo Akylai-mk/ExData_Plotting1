@@ -21,7 +21,7 @@ powerData$Time <- strptime((paste(powerData$Date, powerData$Time)), "%Y-%m-%d %H
 
 ## MAKING PLOT
 Sys.setlocale(category = "LC_ALL", locale = "english") ##the system language is Russian, need to change it to English
-with(powerData, plot(Time, Sub_metering_1, type = "l", xlab="", ylab="Global Active Power (kilowatts)")) 
+with(powerData, plot(Time, Sub_metering_1, type = "l", xlab="", ylab="Energy sub metering")) 
 with(powerData, lines(Time, Sub_metering_2, col = "red"))
 with(powerData, lines(Time, Sub_metering_3, col = "blue"))
 legend("topright", col=c("black", "red", "blue"), lty = 1, legend = c("Sub_metering_1", "Sub_metering_2", "Sub_metering_3"))
